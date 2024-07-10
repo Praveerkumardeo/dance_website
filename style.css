@@ -4,29 +4,25 @@ body {
 }
 
 .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
 }
 
 .logos {
     width: 2.5vw;
-    /* Set the desired width */
     height: 5vh;
     border-radius: 50%;
-    /* Make the image circular */
     margin-left: auto;
     padding-top: .5vh;
-
+    padding-left: 0.5vw;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
-
     padding: 5px;
-
 }
 
 .navbar a {
@@ -40,4 +36,50 @@ body {
 .navbar a:hover {
     background-color: #ddd;
     color: black;
+}
+.text_and_carousel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 50vh; */
+}
+
+#carousel_text{
+    font-size: xx-large;
+    width: 50vw;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+    height: 150vw;
+}
+
+.carousel-item {
+    width: 80%;
+    flex-shrink: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 30%;
+    display: block;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    0%, 33.33% { transform: translateX(0); }
+    33.34%, 66.66% { transform: translateX(-100%); }
+    66.67%, 100% { transform: translateX(-200%); }
 }
